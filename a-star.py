@@ -257,7 +257,7 @@ col,row =  im.size
 print (col,row)
 
 #Tamaño del grid
-n=50
+n=20
 
 
 #Se calcula la cantidad de pixeles por cuadro, para la cuadricula ingresada
@@ -299,7 +299,7 @@ for nn in range (n):
             cont = 0
             #for para ingresar rgb a cada lista y sacarle la moda por casilla
             for j in range (weight):
-                rl, gl, bl,bb = pixels[(j+cont+cont3),(i+cont2)]
+                rl, gl, bl = pixels[(j+cont+cont3),(i+cont2)]
                 r.append(rl), g.append(gl), b.append(bl) 
                 
             #se agrega el salto 
@@ -378,7 +378,7 @@ data = np.zeros((col, row, 3), dtype=np.uint8)
 #matriz de pixeles (color)
 for i in range(row):
     for j in range(col):
-        r,g,b, bb =  pixels[j,i]
+        r,g,b =  pixels[j,i]
         data[j,i]= r,g,b
     
 #transformar de data a imagen
